@@ -97,7 +97,7 @@ CREATE TABLE csc4402_projectdb.User_payment(
     user_id INT UNSIGNED NOT NULL,
     payment_type varchar(35),
     provider varchar(255),
-    annount_no INT UNSIGNED,
+    account_no INT UNSIGNED,
     expiry_date DATE,
     FOREIGN KEY(user_id) REFERENCES Users(user_id),
     PRIMARY KEY(`payment_id`)
