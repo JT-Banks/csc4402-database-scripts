@@ -15,7 +15,7 @@ VALUES(1, '123 Country Rd.', 'Major City', 'U.S', '555-555-5555');
 
 -- 3
 INSERT INTO csc4402_projectdb.user_payment
-(user_id, payment_type, provider, annount_no, expiry_date)
+(user_id, payment_type, provider, account_no, expiry_date)
 VALUES(1, 'Debit Card', 'Bank USA', 11112222, '10-12-24');
 
 -- 4
@@ -44,6 +44,7 @@ INSERT INTO csc4402_projectdb.products
 VALUES('Tom', 'DVD Player', 1, 1, 1, 50.00);
 
 -- 9
-INSERT INTO csc4402_projectdb.cart
-(session_id, product_id, quantity, created_at)
-VALUES(3, 4, 1, CURRENT_TIMESTAMP);
+INSERT INTO csc4402_projectdb.order_details
+(user_id, total, product_id, item_quantity, created_at)
+VALUES(1, 50.00, 1, 1, CURRENT_TIMESTAMP);
+
