@@ -6,7 +6,11 @@ FROM Users;
 -- 1
 INSERT INTO csc4402_projectdb.users
 (username, passwordHash, first_name, last_name, created_at, country)
-VALUES('Tom', 'password123', 'Tom', 'Cruise', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP);
+VALUES('Tom', 'password123', 'Tom', 'Cruise', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+(),
+(),
+(),
+();
 
 -- 2
 INSERT INTO csc4402_projectdb.user_address
