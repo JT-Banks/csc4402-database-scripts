@@ -28,7 +28,7 @@ For initial database load:
    9. Products
    10. Order_items 
   
-  Step 1: Make a database called ``csc4402_projectdb``(Code via SQLite > ``create database csc4402_projectdb``
+  Step 1: Make a database called ``csc4402_projectdb``(Code via SQLite > ``create database csc4402_projectdb``)
   
   Step 2: Load the necessary tables provided in the file ``csc4402_load_database.dll``, each table must be loaded sequentically
   
