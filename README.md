@@ -28,3 +28,4 @@ For initial database load:
    9. Products
    10. Order_items 
   
+  Step 1: Make a database called ``csc4402_projectdb``
