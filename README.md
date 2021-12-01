@@ -28,4 +28,10 @@ For initial database load:
    9. Products
    10. Order_items 
   
-  Step 1: Make a database called ``csc4402_projectdb``
+  Step 1: Make a database called ``csc4402_projectdb``(Code via SQLite > ``create database csc4402_projectdb``
+  
+  Step 2: Load the necessary tables provided in the file ``csc4402_load_database.dll``, each table must be loaded sequentically
+  
+  Step 3: Once the tables are loaded, you can now insert the dummy data provided in the ``Mock Data`` folder. Simply open any file and copy the contents, then paste those                 contents to your SQLite terminal, or if like me you're using Dbeaver, simply ``right-click`` your database, then select ``SQL Editor`` >> ``New Script`` paste contents           there, and execute the script (ALT + X).
+  
+  Step 4: If you wish to test queries provided, simply follow similar steps outlined in step 3, copy and paste the contents from ``query_for_information_samples.ddl``
