@@ -12,16 +12,19 @@ Repository contains scripts for:
 
 I recommend Dbeaver as an interface program that syncs up to MySQL. With Dbeaver you have a nice GUI to work with, that allows for quick queries and visualization.
 
+If you choose not to use Dbeaver, the queries, and syntax are identical. MySQL terminal(sqlite3) will work just fine.
+
 For initial database load:
   - Each table must be loaded individually, one at a time 
   - Insertion of data has to happen in the proper sequence
    1. Users 
-   2. User_address 
-   3. User_payment 
-   4. Shopping_session 
-   5. Inventory 
-   6. Product_category 
-   7. Discount 
-   8. Products 
-   9. Order_details 
+   2. Address 
+   3. Payment 
+   4. Payment_book 
+   5. Address_book
+   6. Orders
+   7. Discount
+   8. Price 
+   9. Products
+   10. Order_items 
   
