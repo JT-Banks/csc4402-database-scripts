@@ -1,0 +1,8 @@
+Content included:
+
+	- Database load scripts
+	- Database Mock data insert scripts
+	- Sample queries
+	- Group final project's powerpoint presentation
+	- Images used during project, and images of successful queries
+	- Group's final documentent
