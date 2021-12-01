@@ -2,21 +2,24 @@ SELECT user_id FROM users as u, orders as o
 WHERE u.user_id = o.user_id AND
 COUNT(o.order_id) > 1;
 
-SELECT user_id FROM orders
-WHERE total > 50;
+/* Qeury for top 25 total spent in orders table */
+SELECT total, user_id, order_id 
+FROM orders
+WHERE total > 50
+ORDER BY total DESC 
+LIMIT 25;
 
 SELECT address_book.user_id 
 FROM address_book INNER JOIN address
 WHERE country = 'United States';
 
-SELECT address_book.user_id 
-FROM address_book ab INNER JOIN users.user_id
-WHERE user_id = users.username;
+SELECT address_book.user_id, users.username 
+FROM address_book 
+INNER JOIN users 
+ON address_book.user_id = users.user_id
+ORDER BY users.username;
 
-SELECT address_book.user_id,
-FROM address_book ab,
-JOIN  ON ab.user_id = user_id;
-
+/* Query for orders created after June 18, 2021 */
 SELECT order_id, created_at FROM orders
 WHERE created_at > '2021-06-18 00:00:00'
 GROUP BY created_at;
@@ -24,20 +27,6 @@ GROUP BY created_at;
 SELECT user_id FROM orders
 WHERE total < 55
 ORDER BY total;
-
-SELECT name, percent 
-FROM discount 
-WHERE percent > 80
-ORDER BY percent DESC;
-
-SELECT customer_id, category_id, c_name, cartquantity 
-FROM (SELECT * FROM (SELECT * FROM (SELECT customer_id, category_id, count(*) AS cartquantity 
-FROM cart NATURAL JOIN availability NATURAL JOIN product NATURAL JOIN customer 
-GROUP BY category_id, customer_id) AS one) AS two WHERE (customer_id, cartquantity) in 
-(SELECT customer_id, max(cartquantity) AS mostusedcategory FROM (SELECT customer_id, category_id, count(*) 
-AS cartquantity FROM cart NATURAL JOIN availability NATURAL JOIN product 
-NATURAL JOIN customer GROUP BY category_id, customer_id) AS three 
-GROUP BY customer_id)) AS four NATURAL JOIN category  
 
 SELECT product_id, SUM(o.quantity) AS TotalQuantity
 FROM order_items o LEFT JOIN products p
@@ -59,3 +48,18 @@ ORDER BY order_items.quantity DESC;
 
 SELECT DISTINCT products.category 
 FROM products;
+
+SELECT total AS total_spent, orders.user_id, users.last_name 
+FROM orders LEFT JOIN users ON orders.user_id = users.user_id 
+ORDER BY total_spent DESC 
+LIMIT 20;
+
+SELECT name, percent 
+FROM discount 
+WHERE percent > 80
+ORDER BY percent DESC;
+
+SELECT last_name, first_name, country 
+FROM users
+WHERE country = 'China'
+ORDER BY last_name;
