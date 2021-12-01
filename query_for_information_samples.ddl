@@ -25,9 +25,10 @@ SELECT user_id FROM orders
 WHERE total < 55
 ORDER BY total;
 
-SELECT name 
+SELECT name, percent 
 FROM discount 
-WHERE percent > 80;
+WHERE percent > 80
+ORDER BY percent DESC;
 
 SELECT customer_id, category_id, c_name, cartquantity 
 FROM (SELECT * FROM (SELECT * FROM (SELECT customer_id, category_id, count(*) AS cartquantity 

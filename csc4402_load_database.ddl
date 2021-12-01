@@ -34,9 +34,9 @@ CREATE TABLE csc4402_projectdb.Address_Book(
 CREATE TABLE csc4402_projectdb.Payment(
     payment_id INT UNSIGNED NOT NULL AUTO_INCREMENT,
     user_id INT UNSIGNED NOT NULL,
-    payment_type varchar(255,
+    payment_type varchar(255),
     provider varchar(255),
-    account_no BIGINT UNSIGNED,
+    account_no varchar(255),
     expiry_date DATE,
     FOREIGN KEY(user_id) REFERENCES Users(user_id),
     PRIMARY KEY(`payment_id`)
